@@ -5,7 +5,7 @@
 package main;
 
 import javax.swing.JOptionPane;
-import modulo.Producto;
+import modulo. *;
 
 /**
  *
@@ -14,7 +14,7 @@ import modulo.Producto;
 public class Menu {
 
     private int opcion;
-    private Producto producto = new Producto();
+    private Inventario i = new Inventario();
 
     public void menuPrincipal() {
 
@@ -31,16 +31,17 @@ public class Menu {
                                                                     6. Calcular VALOR TOTAL del inventario
                                                                     7. SALIR DEL SISTEMA
                                                                     """));
-            if (opcion >= 2 && opcion < 7 && producto.getCantidadDisponible() == 0) {
+            if (opcion >= 2 && opcion < 7 && i.getCantidad()== 0) {
                 JOptionPane.showMessageDialog(null, "ERROR\nDebe registrar un PRODUCTO primero");
                 continue;
             }
             switch (opcion) {
                 case 1:
-                    JOptionPane.showMessageDialog(null, "En desarollo ...");
+                    i.registroProductos();
+                    JOptionPane.showMessageDialog(null, "Producto registrado correctamente (" + i.getCantidad() + " de 10)" );
                     break;
                 case 2:
-                    producto.infoProdutos();
+                    i.mostrarInfo();
                     break;
                 case 3:
                     JOptionPane.showMessageDialog(null, "En desarollo ...");

@@ -61,13 +61,14 @@ public class Producto {
     public void setCantidadDisponible(int cantidadDisponible) {
         this.cantidadDisponible = cantidadDisponible;
     }
-    
+
     //MÉTODO PARA VISUALIZAR LA INFORMACIÓN DE LOS PRODUCTOS
-    public void infoProdutos(){
-        JOptionPane.showMessageDialog(null, "CÓDIGO: " + codigo + 
-                "\nNombre: " + nombre + 
-                "\nPrecio:" + precio + 
-                "\nDisponibles: " + cantidadDisponible);
+    public void infoProdutos() {
+        JOptionPane.showMessageDialog(null, "INFORMACIÓN DEL PRODUCTO\n\n"
+                + "CÓDIGO: " + codigo
+                + "\nNombre del producto: " + nombre
+                + "\nPrecio: ₡" + precio
+                + "\nDisponibles: " + cantidadDisponible);
     } //Fin de infoProductos
-    
+
 } //Fin de la clase
