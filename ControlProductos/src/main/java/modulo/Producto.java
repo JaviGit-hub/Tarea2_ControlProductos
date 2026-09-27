@@ -67,7 +67,7 @@ public class Producto {
         JOptionPane.showMessageDialog(null, "INFORMACIÓN DEL PRODUCTO\n\n"
                 + "CÓDIGO: " + codigo
                 + "\nNombre del producto: " + nombre
-                + "\nPrecio: ₡" + precio
+                + "\nPrecio: ₡ " + precio
                 + "\nDisponibles: " + cantidadDisponible);
     } //Fin de infoProductos
 
