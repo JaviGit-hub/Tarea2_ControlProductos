@@ -47,7 +47,7 @@ public class Menu {
                     i.buscarProductos();
                     break;
                 case 4:
-                    JOptionPane.showMessageDialog(null, "En desarollo ...");
+                    i.venderUnidades();
                     break;
                 case 5:
                     JOptionPane.showMessageDialog(null, "En desarollo ...");
