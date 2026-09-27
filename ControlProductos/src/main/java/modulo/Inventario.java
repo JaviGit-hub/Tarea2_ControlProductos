@@ -34,11 +34,16 @@ public class Inventario {
             String nombre = JOptionPane.showInputDialog("REGISTRO\nNombre del producto");
             double precio = Double.parseDouble(JOptionPane.showInputDialog("REGISTRO\nPrecio ₡"));
             int cantidadDisponible = Integer.parseInt(JOptionPane.showInputDialog("REGISTRO\nCantidad disponible"));
+            
+            //CONDICIÓN PARA VALIDAR QUE LA CANTIDAD INICIAL A REGISTAR NO SEA 0
+            while (cantidadDisponible <= 0){
+                JOptionPane.showMessageDialog(null, "ERROR\nLa cantidad a registrar no puede ser 0");
+                cantidadDisponible = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cantidad nuevamente"));
+            }
 
             productos[i] = new Producto(codigo, nombre, precio, cantidadDisponible);
-            break;
+            break;   
         }
-
     } //Fin de registroProducto()
 
     public void mostrarInfo() {
@@ -60,7 +65,7 @@ public class Inventario {
                 
                 JOptionPane.showMessageDialog(null, "PRODUCTO ENCONTRADO: " + productos[i].getNombre()
                         + "\nPrecio ₡" + productos[i].getPrecio()
-                        + "\n Disponibles: " + productos[i].getCantidadDisponible());
+                        + "\nDisponibles: " + productos[i].getCantidadDisponible());
                 
                 return;
             }
