@@ -32,7 +32,7 @@ public class Inventario {
         for (int i = 0; i < productos.length; i++) {
             int codigo = Integer.parseInt(JOptionPane.showInputDialog("REGISTRO\nIngrese el código del producto (SOLO DÍGITOS)"));
             String nombre = JOptionPane.showInputDialog("REGISTRO\nNombre del producto");
-            double precio = Double.parseDouble(JOptionPane.showInputDialog("REGISTRO\nPrecio ₡ "));
+            double precio = Double.parseDouble(JOptionPane.showInputDialog("REGISTRO\nPrecio ₡"));
             int cantidadDisponible = Integer.parseInt(JOptionPane.showInputDialog("REGISTRO\nCantidad disponible"));
 
             productos[i] = new Producto(codigo, nombre, precio, cantidadDisponible);
@@ -47,6 +47,25 @@ public class Inventario {
                 productos[i].infoProdutos();
             }
         }
-    } //Fin de mostrarInfo
+    } //Fin de mostrarInfo()
 
+    public void buscarProductos() {
+        int codigo = Integer.parseInt(JOptionPane.showInputDialog("BÚSQUEDA DE PRODUCTOS\nIngrese el código"));
+
+        int indice = -1; //SI NO SE ENCUENTRA EL CÓDIGO EN EL ARREGLO RETORNA ESTE VALOR
+
+        for (int i = 0; i < productos.length; i++) {
+            if (productos[i] != null && productos[i].getCodigo() == codigo) {
+                indice = i;
+                
+                JOptionPane.showMessageDialog(null, "PRODUCTO ENCONTRADO: " + productos[i].getNombre()
+                        + "\nPrecio ₡" + productos[i].getPrecio()
+                        + "\n Disponibles: " + productos[i].getCantidadDisponible());
+                
+                return;
+            }
+        }
+        JOptionPane.showMessageDialog(null, "El producto NO EXISTE. Intente nuevamente");
+
+    } //Fin de buscarProductos()
 }

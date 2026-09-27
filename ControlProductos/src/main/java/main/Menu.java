@@ -44,7 +44,7 @@ public class Menu {
                     i.mostrarInfo();
                     break;
                 case 3:
-                    JOptionPane.showMessageDialog(null, "En desarollo ...");
+                    i.buscarProductos();
                     break;
                 case 4:
                     JOptionPane.showMessageDialog(null, "En desarollo ...");
