@@ -38,7 +38,6 @@ public class Menu {
             switch (opcion) {
                 case 1:
                     i.registroProductos();
-                    JOptionPane.showMessageDialog(null, "Producto registrado correctamente (" + i.getCantidad() + " de 10)" );
                     break;
                 case 2:
                     i.mostrarInfo();
@@ -50,10 +49,10 @@ public class Menu {
                     i.venderUnidades();
                     break;
                 case 5:
-                    JOptionPane.showMessageDialog(null, "En desarollo ...");
+                    i.reestablecerInventario();
                     break;
                 case 6:
-                    JOptionPane.showMessageDialog(null, "En desarollo ...");
+                    i.valorInventario();
                     break;
                 case 7:
                     JOptionPane.showMessageDialog(null, "Saliendo del sistema de control ...");
@@ -62,5 +61,5 @@ public class Menu {
                     JOptionPane.showMessageDialog(null, "ERROR\nOpción inválida. Intente nuevamente");
             }
         } while (opcion != 7);
-    }
+    } //Fin de menuPrincipal()
 }
